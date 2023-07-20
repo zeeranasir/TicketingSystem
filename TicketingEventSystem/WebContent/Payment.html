@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    
+    .container {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    form {
+      margin-top: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Payment</h1>
+      
+      <form action="ConfirmationServletURL" method="post">
+        <div class="form-group">
+          <label for="cardholder-name">Cardholder Name</label>
+          <input type="text" id="cardholder-name" name="cardholderName" placeholder="Enter cardholder name" required>
+        </div>
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" name="cardNumber" placeholder="Enter card number" required>
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" name="cvv" placeholder="Enter CVV" required>
+        </div>
+        <button type="submit" class="btn">Next</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
